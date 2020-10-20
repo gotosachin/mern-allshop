@@ -1,3 +1,5 @@
+AllShop - E-commerce application using MERN ---
+
 1. npm run dev - start both frontend and backend
 2. npm run server - start backend
 3. npm run client - start only frontend
