@@ -13,7 +13,14 @@ router.get(
   '/',
   asyncHandler(async (req, res) => {
     const products = await Product.find({})
-    res.json(products)
+    if (products) {
+      // res.status(401)
+      // throw new Error('Some error occured')
+      res.json(products)
+    } else {
+      res.status(401)
+      throw new Error('Some error occured: No product found!!')
+    }
   })
 )
 
